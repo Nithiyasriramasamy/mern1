@@ -1,0 +1,19 @@
+
+h{
+    color: green;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.two{
+    font-size: 36px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    background-color: aquamarine;
+}
+p{
+    color: rgb(10, 10, 240);
+    font-size: 20px;
+    text-align: center;
+    background-color: lemonchiffon;
+}
