@@ -1,0 +1,139 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple Form</title>
+</head>
+<body>
+
+<h2>Register</h2>
+
+<form action="/register" method="POST">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+  <label for="phone">Phone:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"><br><br>
+  <label>gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<form>
+
+  <!-- Name -->
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <!-- Email -->
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <!-- Password -->
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br><br>
+
+  <!-- Date -->
+  <label for="date">Select Date:</label><br>
+  <input type="date" id="date" name="date"><br><br>
+
+  <!-- Time -->
+  <label for="time">Select Time:</label><br>
+  <input type="time" id="time" name="time"><br><br>
+
+  <!-- File Upload -->
+  <label for="file">Upload File:</label><br>
+  <input type="file" id="file" name="file"><br><br>
+
+  <!-- Dropdown -->
+  <label for="course">Select Course:</label><br>
+  <select id="course" name="course">
+    <option>HTML</option>
+    <option>CSS</option>
+    <option>Java</option>
+    <option>C Programming</option>
+    <option>Data Science</option>
+  </select><br><br>
+
+  <!-- Address -->
+  <label for="address">Address:</label><br>
+  <textarea id="address" name="address"></textarea><br><br>
+
+  <!-- Phone -->
+  <label for="phone">Phone Number:</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digit number"><br><br>
+
+  <!-- Submit -->
+  <input type="submit">
+
+</form>
+<style>
+table ,th,td{
+    border: 1px solid black;
+}
+</style>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>28</td>
+  </tr>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2">name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>28</td>
+  </tr>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Telephone</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+    <tr>
+        <td>55577856</td>
+</table>
+</body>
+</html>
