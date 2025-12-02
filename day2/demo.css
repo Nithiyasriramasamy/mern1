@@ -5,15 +5,80 @@ h{
     text-align: center;
 }
 .two{
+    margin-top: auto;
     font-size: 36px;
     font-weight: bold;
     color: red;
     text-align: center;
     background-color: aquamarine;
 }
+.one{
+    color: rgb(240, 10, 10);
+    font-size: 20px;
+    text-align: center;
+    background-color: lemonchiffon;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 10px;
+    border-style: outset;
+    border-style: solid;
+
+}
+.THREE{
+    color: rgb(240, 10, 10);
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(229, 192, 219);
+     padding-top: 50px;
+     padding-right: 30px;
+     padding-bottom: 50px;
+     padding-left: 80px;
+     text-transform: uppercase;
+
+}
+.hea{
+    margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+
+    color: rgb(240, 10, 10);
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(33, 172, 47);
+}
+.four{
+   text-align: center;
+  color: red;
+}
+
 p{
     color: rgb(10, 10, 240);
     font-size: 20px;
     text-align: center;
-    background-color: lemonchiffon;
+    background-color: rgb(125, 214, 217);
+}
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Visited link */
+a:visited {
+  color: rgb(86, 205, 112);     /* Change to any color you want */
+}
+
+/* Mouse over */
+a:hover {
+  color: red;
+}
+
+/* While clicking */
+a:active {
+  color: rgb(95, 197, 210);
+}
 }
