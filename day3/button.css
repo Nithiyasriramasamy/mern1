@@ -1,0 +1,120 @@
+.but{
+  background-color: #ee4a4a;
+  opacity: 0.8; 
+  margin-right: 1500px;
+  border: 2px solid black;
+ border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+   box-shadow: 0 6px 6px rgba(246, 133, 133, 0.6);
+
+  border-radius: 20px;
+
+}
+.but:hover{
+    opacity: 1.0;
+}
+
+div{
+     height: 10px;
+     width: 50px;
+    border-style: solid;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 100px;
+    /* position: relative;
+    top= 50px;
+    left: 30px; */
+    /* margin-right: 50px; */
+   
+
+}
+h1{
+     position: sticky;
+     right:10px;
+    bottom: 70px;
+
+}
+.sc{
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+.one{
+     width: 20%;
+    position: absolute;
+    background: rgb(79, 238, 95);
+  z-index: 3;
+  border: solid;
+  height: 10px;
+  margin: 50px;
+}
+.two{
+    position: absolute;
+  z-index: 2;
+  background: pink;
+  width: 20%;
+  left: 65%;
+  height: 12px;
+  opacity: 0.9;
+}
+.three{
+    position: absolute;
+    z-index: 1;
+     background: cyan;
+    width: 50%;
+     left: 40px;
+}
+
+/* .container {
+  margin-top: 100px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+   background-color: DodgerBlue;
+}
+.container .item {
+  background-color: Tomato;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+} */
+
+.new{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 2px solid black;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.gallery {
+    display: flex;        
+    flex-wrap: nowrap;       
+    gap: 15px;            
+    justify-content: center; 
+    flex-direction: row;
+
+
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;   
+    border-radius: 10px;  
+}
