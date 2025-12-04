@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Aroud The World — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .marquee { overflow: hidden; white-space: nowrap; }
+    .marquee .track { display: inline-block; animation: marquee 18s linear infinite; }
+    @keyframes marquee { 0% { transform: translateX(0%);} 100% { transform: translateX(-50%);} }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-white">TA</div>
+        <h1 class="text-lg font-semibold">Travel Aroud The World</h1>
+      </div>
+
+      <nav class="flex gap-6 items-center text-sm text-slate-600">
+        <a href="login.html" class="hover:text-emerald-600 font-medium">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-6xl mx-auto px-6 py-10">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="w-full h-80 object-cover" />
+      </div>
+
+      <article class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-3xl font-bold">Explore The World With Us</h2>
+        <p class="mt-3 text-slate-600">Discover amazing destinations, plan your trips, and explore the most beautiful places around the globe.</p>
+        <a href="login.html" class="inline-block mt-5 px-5 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium">Get Started</a>
+      </article>
+    </section>
+
+    <!-- Marquee -->
+    <section class="mt-10">
+      <h3 class="text-lg font-semibold mb-3">Popular Destinations</h3>
+      <div class="marquee bg-white rounded-xl p-3 shadow overflow-hidden">
+        <div class="track">
+          <div class="inline-flex items-center gap-4">
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" />
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1503264116251-35a269479413" />
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1504773540341-7bdc6f6b5a92" />
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" />
+            <!-- Duplicate for smooth loop -->
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" />
+            <img class="w-40 h-28 object-cover rounded-lg shadow" src="https://images.unsplash.com/photo-1503264116251-35a269479413" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 bg-white border-t">
+    <div class="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-slate-600">
+      © <span id="year"></span> Travel Aroud The World. All rights reserved.
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').innerText = new Date().getFullYear();</script>
+</body>
+</html>
