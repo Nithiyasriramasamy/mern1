@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Record Interface</title>
+<style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { padding: 8px; margin: 5px; }
+    .box { padding: 10px; border: 1px solid #aaa; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<h2>Student Record – JS Interface</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="number" id="age" placeholder="Enter Age">
+<input type="text" id="dept" placeholder="Enter Department">
+<button onclick="addStudent()">Add Student</button>
+
+<div class="box">
+    <h3>Student Records</h3>
+    <div id="output"></div>
+</div>
+
+<script>
+// ----------------------------
+// Using SET to maintain UNIQUE student names
+// ----------------------------
+let studentNames = new Set();
+
+// ----------------------------
+// Using MAP to store student info (key = name, value = student object)
+// ----------------------------
+let studentMap = new Map();
+
+function addStudent() {
+    let name = document.getElementById("name").value.trim();
+    let age = document.getElementById("age").value;
+    let dept = document.getElementById("dept").value.trim();
+
+    if (!name || !age || !dept) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    // Check duplicate using SET
+    if (studentNames.has(name)) {
+        alert("Student already exists!");
+        return;
+    }
+
+    // Add to set
+    studentNames.add(name);
+
+    // Student object
+    let student = {
+        name: name,
+        age: age,
+        department: dept
+    };
+
+    // Store in Map
+    studentMap.set(name, student);
+
+    displayStudents();
+}
+
+// ----------------------------
+// Display using forEach
+// ----------------------------
+function displayStudents() {
+    let out = "";
+
+    studentMap.forEach((studentObj, key) => {
+        out += `<b>Name:</b> ${key}<br>`;
+
+        // Using for...in to read object properties
+        for (let prop in studentObj) {
+            out += `${prop}: ${studentObj[prop]}<br>`;
+        }
+
+        out += "<hr>";
+    });
+
+    document.getElementById("output").innerHTML = out;
+}
+</script>
+
+</body>
+</html>

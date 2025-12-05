@@ -387,28 +387,45 @@
 
 //synchronous code
 
-console.log("first");
-setTimeout(() => {
-    console.log("second");
-}, 2000);
-console.log("third");   
-//output:
-//first
-//third
-//second(after 2 seconds delay)
+// console.log("first");
+// setTimeout(() => {
+//     console.log("second");
+// }, 2000);
+// console.log("third");   
+// //output:
+// //first
+// //third
+// //second(after 2 seconds delay)
 
 //callback hell
 
-setTimeout(() => {
-    console.log("first");
-    setTimeout(() => {
-        console.log("second");
-        setTimeout(() => {
-            console.log("third");
-        }, 2000);
-    }, 2000);
-}, 2000);
-//output:
-//first
-//second(after 2 seconds delay)
-//third(after 2 seconds delay)
+// setTimeout(() => {
+//     console.log("first");
+//     setTimeout(() => {
+//         console.log("second");
+//         setTimeout(() => {
+//             console.log("third");
+//         }, 2000);
+//     }, 2000);
+// }, 2000);
+// output:
+// first
+// second(after 2 seconds delay)
+// third(after 2 seconds delay)
+
+//promise
+let icecreampromise = new Promise((resolve, reject) => {
+    let iceCreamready = false;
+    if (iceCreamready) {
+        resolve("Ice cream is ready!"); 
+    } else {
+        reject("Ice cream is not ready.");
+    }
+});
+icecreampromise
+    .then((message) => {
+        console.log( "👌yay!" +message);
+    })
+    .catch((error) => {
+        console.log("oops" + error);
+    });
