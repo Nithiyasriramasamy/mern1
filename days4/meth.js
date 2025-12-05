@@ -216,7 +216,7 @@
 // let sliced= fruits.slice(1,3);
 // console.log(fruits);//["apple", "banana", "cherry", "date"]
 
-// console.log(sliced);//["banana", "cherry"]
+// console.log(sliced);//["banana", "cherry"]   
 
 
 // let lasttwo= fruits.slice(-2);
@@ -268,6 +268,132 @@
 // let even=numbers.find(numbers => numbers % 2 === 0);
 // console.log(even);//40(first even element) 
 
-let numbers = [40, 100, 1, 5, 25, 10];
-let doubled = numbers.map(num => num * 2);
-console.log(doubled);//[80, 200, 2, 10, 50, 20]
+// let numbers = [40, 100, 1, 5, 25, 10];
+// let doubled = numbers.map(num => num * 2);
+// console.log(doubled);//[80, 200, 2, 10, 50, 20]
+
+//arrays of objects
+// let students = [
+//     {name: "Alice", age: 20,grade: "A"},
+//     {name: "Bob", age: 22,grade: "B"},
+//     {name: "Charlie", age: 19,grade: "A"}
+// ];  
+// let names = students.map(student => student.name);
+// console.log(names);//["Alice", "Bob", "Charlie"]
+// let ages = students.map(student => student.age);
+// console.log(ages);//[20, 22, 19]
+// let adultStudents = students.filter(student => student.age >= 21);
+// console.log(adultStudents);//[{name: "Bob", age: 22}]   
+// let totalAge = students.reduce((sum, student) => sum + student.age, 0);
+// console.log(totalAge);//61(20+22+19)
+// let gradeAStudents = students.filter(student => student.grade === "A");
+// console.log(gradeAStudents);//[{name: "Alice", age: 20,grade: "A"},{name: "Charlie", age: 19,grade: "A"}]
+
+//chaning array methods
+// let students = [
+//     {name: "Alice", age: 20,grade: "A"},
+//     {name: "Bob", age: 22,grade: "B"},  
+//     {name: "Charlie", age: 19,grade: "A"}
+// ];
+// let namesOfGradeA = students
+//     .filter(student => student.grade === "A")
+//     .map(student => student.name);
+// console.log(namesOfGradeA);//["Alice", "Charlie"]
+// let totalAgeOfGradeA = students
+//     .filter(student => student.grade === "A")
+//     .reduce((sum, student) => sum + student.age, 0);
+// console.log(totalAgeOfGradeA);//39(20+19)   
+
+// let students = [
+//     {name: "Alice", marks: 85},
+//     {name: "Bob", marks: 92},
+//     {name: "Charlie", marks: 78},
+// ];
+// let topScorer = students.fitter(stu =>stu.marks>80).map(stu => stu.name);
+// console.log(topScorer);//["Alice","Bob"]
+
+//looping
+// let colors = ["red", "green", "blue"];
+// for (let i = 0; i < colors.length; i++) {
+//     console.log(colors[i]);//output: red green blue
+// }
+// while (colors.length > 0) {
+//     let color = colors.pop();
+//     console.log(color);//output: blue green red
+// }
+// //for in
+
+// let person = { name: "Alice", age: 25, city: "New York" };
+// for (let key in person) {
+//     console.log(key + ": " + person[key]);
+//     //output:
+//     //name: Alice
+//     //age: 25
+//     //city: New York
+// }
+
+// //for of
+
+// let fruits = ["apple", "banana", "cherry","data","elderberry"];
+// for (let f of fruits) {
+//     console.log(f);
+//     //output:
+//     //apple
+//     //banana
+//     //cherry
+//     //data
+//     //elderberry
+// }
+
+//forEach--we can pass three parameters(value,index,array),callback function
+
+// let numbers = [10, 20, 30, 40, 50];
+// numbers.forEach(function(num, index, arr) {
+//     console.log("Index " + index + ": " + num);
+//     //output:
+//     //Index 0: 10
+//     //Index 1: 20   
+//     //Index 2: 30
+//     //Index 3: 40
+//     //Index 4: 50
+// });
+
+//REDUCE
+//(accumulator, currentValue, currentIndex, array)
+// let numbers = [1, 2, 3, 4, 5];
+// let total = numbers.reduce((sum,current) => sum + current, 0);
+// console.log(total);//15(1+2+3+4+5)       
+
+// let product = numbers.reduce((prod,current) => prod * current, 1);
+// console.log(product);//120(1*2*3*4*5)
+
+// //finding maximum value
+// let max = numbers.reduce((a,b) => (a > b ? a : b));
+// console.log(max);//5
+
+//concatenating strings,array
+
+// let numbers = [1, 2, 3];
+// let number2 = [4, 5, 6];
+// let com = numbers.concat(number2);
+// console.log(com);//[1,2,3,4,5,6]
+
+//spread operator(...)
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];
+// let combined = [...arr1, ...arr2];
+// console.log(combined);//[1,2,3,4,5,6]
+
+//synchronous code
+
+console.log("first");
+setTimeout(() => {
+    console.log("second");
+}, 2000);
+console.log("third");   
+//output:
+//first
+//third
+//second(after 2 seconds delay)
+
