@@ -397,3 +397,18 @@ console.log("third");
 //third
 //second(after 2 seconds delay)
 
+//callback hell
+
+setTimeout(() => {
+    console.log("first");
+    setTimeout(() => {
+        console.log("second");
+        setTimeout(() => {
+            console.log("third");
+        }, 2000);
+    }, 2000);
+}, 2000);
+//output:
+//first
+//second(after 2 seconds delay)
+//third(after 2 seconds delay)
