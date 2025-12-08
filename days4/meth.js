@@ -414,18 +414,38 @@
 // third(after 2 seconds delay)
 
 //promise
-let icecreampromise = new Promise((resolve, reject) => {
-    let iceCreamready = false;
-    if (iceCreamready) {
-        resolve("Ice cream is ready!"); 
-    } else {
-        reject("Ice cream is not ready.");
-    }
-});
-icecreampromise
-    .then((message) => {
-        console.log( "👌yay!" +message);
-    })
-    .catch((error) => {
-        console.log("oops" + error);
-    });
+// let icecreampromise = new Promise((resolve, reject) => {
+//     let iceCreamready = false;
+//     if (iceCreamready) {
+//         resolve("Ice cream is ready!"); 
+//     } else {
+//         reject("Ice cream is not ready.");
+//     }
+// });
+// icecreampromise
+//     .then((message) => {
+//         console.log( "👌yay!" +message);
+//     })
+//     .catch((error) => {
+//         console.log("oops" + error);
+//     });
+
+//destructuring
+//array destructuring
+
+// let colors = ["red", "green", "blue"];
+// let [firstColor, secondColor, thirdColor] = colors;
+// console.log(firstColor);//red
+// console.log(secondColor);//green
+// console.log(thirdColor);//blue
+
+// const [a,b,c,d,e] = [10, 20, 30, 40, 50];
+// console.log(a);//10
+// console.log(b);//20
+// console.log(c);//30
+
+const{name,age,city}= {name:"Alice",age:25,city:"New York"};
+console.log(name);//Alice
+console.log(age);//25   
+console.log(city);//New York    
+
